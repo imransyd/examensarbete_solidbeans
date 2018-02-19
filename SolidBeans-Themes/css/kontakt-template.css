@@ -1,0 +1,194 @@
+/*Generals */
+/*html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}*/
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#body{
+  flex: 1;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+     /* Height of the footer */
+
+}
+ @import url('https://fonts.googleapis.com/css?family=Squada+One');
+ @import url("https://fonts.googleapis.com/css?family=Fjalla+One");
+ @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700");
+
+.map-collection {
+  top: 9em;
+  width: 350px;
+  height: 700px;
+}
+
+.limit-width {
+  top: 28vh;
+  right: 10vw;
+  width: 80vw;
+  height: 65vh;
+}
+/*Styling Card */
+.card {
+  font-family: 'Squada One';
+  background: #fff;
+  position: absolute;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.1s ease all;
+}
+
+
+.card-foooter button {
+  font-family: 'Squada One';
+  width: 100%;
+  font-size: 24px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: rgb(255,201,102);
+  border: none;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/*Animation Classes And Prerequisits */
+.above {
+  z-index: 1;
+}
+
+.below {
+  z-index: 0;
+}
+
+.turned {
+  opacity: 0.8;
+}
+.mapFrame{
+height: 60vh;
+  width:100%;
+}
+.goth-card, .log-in-card, .mapframe {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.goth-card.turned {
+  -webkit-filter: blur(0.9px));
+  filter: blur(0.9px);
+  webkit-filter: blur(0.9px));
+  -webkit-transform: translateX(60px) translateY(-100px) scale(0.8);
+  transform: translateX(60px) translateY(-100px) scale(0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition-duration: 1s;
+}
+
+.stockholm-card.turned {
+  -webkit-filter: blur(0.9px));
+  filter: blur(0.9px);
+  webkit-filter: blur(0.9px));
+  -webkit-transform: translateX(60px) translateY(-100px) scale(0.8);
+  transform: translateX(60px) translateY(-100px) scale(0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition-duration: 1s;
+}
+
+.animation-state-1 .goth-card.below {
+  -webkit-transform: rotateZ(-7deg) translateY(300px) scale(0.78);
+  transform: rotateZ(-7deg) translateY(350px) scale(0.78);
+  opacity: 1;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);</svg>#filter');
+  -webkit-filter: blur(0.4px);
+  filter: blur(0.4px);
+  webkit-filter: blur(0.4px);
+  transition-duration: 1s;
+}
+.animation-state-1 .stockholm-card.above {
+  -webkit-transform: rotateZ(-83deg) translateY(-180px) translateX(100px) scale(0.78);
+  transform: rotateZ(-83deg) translateY(-180px) translateX(100px) scale(0.78);
+  opacity: 1;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-filter: blur(0.5px);
+  filter: blur(0.5px);
+  webkit-filter: blur(0.5px);
+  transition-duration: 1s;
+}
+
+.animation-state-finish .goth-card.above {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: rotateZ(5deg) translateY(0px) translateX(100px) scale(1);
+  transform: rotateZ(5deg) translateY(0px) translateX(100px) scale(1);
+  opacity: 1;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  webkit-filter: blur(0);
+  transition-duration: 1s;
+}
+.animation-state-finish .stockholm-card.below {
+  -webkit-filter: blur(0.4px);
+  filter: blur(0.4px);
+  webkit-filter: blur(0.4px);
+  -webkit-transform: rotateZ(-90deg) translate3d(0, 100px, 0) scale(0.7);
+  transform: rotateZ(-90deg) translate3d(0, 100px, 0) scale(0.7);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  opacity: 0.7;
+  transition-duration: 1s;
+}
+
+.animation-state-1 .stockholm-card.below {
+  -webkit-transform: rotateZ(-10deg) translateY(10px) scale(0.78);
+  transform: rotateZ(-10deg) translateY(10px) scale(0.78);
+  opacity: 1;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-filter: blur(0.5px);
+  filter: blur(0.5px);
+  webkit-filter: blur(0.5px);
+  transition-duration: 1s;
+}
+.animation-state-1 .goth-card.above {
+  -webkit-transform: rotateZ(-80deg) translateY(-170px) translateX(200px) scale(0.78);
+  transform: rotateZ(-80deg) translateY(-170px) translateX(200px) scale(0.78);
+  opacity: 1;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-filter: blur(0.4px);
+  filter: blur(0.4px);
+  webkit-filter: blur(0.4px);
+  transition-duration: 1s;
+}
+
+.animation-state-finish .stockholm-card.above {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: rotateZ(5deg) translateY(0px) translateX(100px) scale(1);
+  transform: rotateZ(5deg) translateY(0px) translateX(100px) scale(1);
+  opacity: 1;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  webkit-filter: blur(0);
+  transition-duration: 1s;
+}
+.animation-state-finish .goth-card.below {
+  -webkit-filter: blur(0.4px);
+  filter: blur(0.4px);
+  webkit-filter: blur(0.4px);
+  -webkit-transform: rotateZ(-90deg) translate3d(0, 100px, 0) scale(0.7);
+  transform: rotateZ(-90deg) translate3d(0, 100px, 0) scale(0.7);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  opacity: 0.7;
+  transition-duration: 1s;
+}

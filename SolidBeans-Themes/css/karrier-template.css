@@ -1,0 +1,428 @@
+/*
+**scrollbar
+**modal button
+**modal window
+**modal title typography
+**modal window typography
+*/
+
+
+
+
+
+/* * * scrollbar * * */
+body::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+body{
+  background-image: url("images/tools-for-motivation-301199.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+.outerColumnContainer{
+  background-image: url("images/tools-for-motivation-301199.jpg");
+  background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
+}
+.columnContainer{
+  background-image: url("images/tools-for-motivation-301199.jpg");
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  color: white;
+}
+.modalButtonColumn, .AMModBtnTitle{
+  will-change: width, left, z-index;
+  position: absolute;
+  width: 25.6%;
+  min-height: 100vh;
+  overflow: hidden;
+  cursor: pointer;
+    background: -webkit-linear-gradient(left, rgb(255, 156, 89), rgb(232, 135, 69)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgb(255, 156, 89), rgb(232, 135, 69)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgb(255, 156, 89), rgb(232, 135, 69)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgba(255, 156, 89, 0.2), rgba(232, 135, 69, 0.6)); /* Standard syntax (must be last)*/
+}
+
+.AMModBtnTitle{
+  width: 100%;
+  height: 100%;
+   /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.modalButtonColumn:nth-child(1) {
+  left: 0;
+}
+.modalButtonColumn:nth-child(2) {
+  left: 25vw;
+}
+.modalButtonColumn:nth-child(3) {
+  left: 50vw;
+}
+.modalButtonColumn:nth-child(4) {
+  left: 75vw;
+}
+
+
+@media screen and (max-width: 760px) {
+
+
+body{
+  background-image: url("images/background-white.jpg");
+  background-size:cover;
+  height: 150vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.outerColumnContainer{
+  width: 100%;
+  height: 100%;
+   margin:0 auto;
+   background-image: url("images/background-white.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.columnContainer{
+  position: relative;
+  width: 90%;
+  min-height: 130vh;
+  text-align: center;
+  color: white;
+      margin: auto;
+}
+
+
+
+  .modalButtonColumn, .AMModBtnTitle {
+    min-height: 20%;
+    width: 100%;
+
+  background: -webkit-linear-gradient(bottom, rgb(255, 156, 89), rgb(232, 135, 69), rgb(232, 135, 69)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgb(255, 156, 89), rgb(232, 135, 69, rgb(232, 135, 69))); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgb(255, 156, 89), rgb(232, 135, 69), rgb(232, 135, 69)); /* For Firefox 3.6 to 15 */
+    background: -webkit-gradient(linear, bottom, rgb(255, 156, 89), rgb(232, 135, 69), rgb(232, 135, 69)); /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+    background: linear-gradient(to bottom, rgb(255, 156, 89), rgb(232, 135, 69), rgb(232, 135, 69)); /* Standard syntax (must be last)*/
+  }
+
+
+  .modalButtonColumn:nth-child(1) {
+    top: 0vh;
+    left: 0;
+    width: 100%;
+  }
+  .modalButtonColumn:nth-child(2) {
+    top: 25vh;
+    left: 0;
+    width: 100%;
+  }
+  .modalButtonColumn:nth-child(3) {
+    top: 50vh;
+    left: 0;
+    width: 100%;
+  }
+  .modalButtonColumn:nth-child(4) {
+    top: 75vh;
+    left: 0;
+    width: 100%;
+  }
+
+}
+
+
+
+/* modal window */
+.modalContentOuter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border: 5px solid grey;
+  background: #fff;
+  overflow: auto;
+}
+[class*="close-"] {
+  color: #CC4425;
+  cursor: pointer;
+  display: block;
+  font-size: 1.8em;
+  height: 30px;
+  left: 50%;
+  right: 50%;
+  bottom: 30px;
+  line-height: 30px;
+  margin-top: 0.8em;
+  margin-bottom: 1em;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 30px;
+}
+.content1
+{  
+  position: absolute;
+  transform: perspective(1000px) scale(0,1);
+  transform-origin: 25% 0;
+   transition: 1.5s;
+}
+.content2
+{  
+  position: absolute;
+  transform: perspective(1000px) scale(0,1);
+  transform-origin: 50% 0;
+   transition: 1.5s;
+}
+.content3
+{  
+  position: absolute;
+  transform: perspective(1000px) scale(0,1);
+  transform-origin: 75% 0;
+   transition: 1.5s;
+}
+.content4
+{  
+  position: absolute;
+  transform: perspective(1000px) scale(0,1);
+  transform-origin: 99% 0;
+   transition: 1.5s;
+}
+
+@media screen and (max-width: 760px) {
+  .content1
+{  
+  position: absolute;
+  transform: perspective(1000px) scale(1,0);
+  transform-origin: 0 25%;
+   transition: 1.5s;
+}
+.content2
+{  
+  position: absolute;
+  transform: perspective(1000px) scale(1,0);
+  transform-origin: 0 50%;
+   transition: 1.5s;
+}
+.content3
+{  
+  position: absolute;
+  transform: perspective(1000px) scale(1,0);
+  transform-origin: 0 75%;
+   transition: 1.5s;
+}
+.content4
+{  
+  position: absolute;
+  transform: perspective(1000px) scale(1,0);
+  transform-origin: 0 99%;
+   transition: 1.5s;
+}
+
+}
+.active
+{  
+  position: absolute;
+  transform: perspective(1000px) scale(1,1);
+}
+
+
+/* * typography * */
+.modal-content-inner
+{
+  padding-top: 3em;
+  padding-left: 7em;
+  padding-right: 5em;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.1s, opacity 2s linear;
+}
+.modal-content-inner-active
+{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+.modal-content-inner>h1
+{
+  font-family: 'Cormorant Infant';
+  letter-spacing: -1px;
+  margin-bottom: 48px;
+  text-align: center;
+  color: #CC4425;
+  font-size: 84px;
+  font-weight: 600;
+  line-height: 96px;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+.modal-content-inner>h2
+{
+  color: #CC4425;
+  font-family: 'Cormorant Infant';
+  font-size: 78px;
+  font-weight: 600;
+  line-height: 96px;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+.modal-content-inner>h3, .modal-content-inner>h4
+{
+  color: #CC4425;
+  font-family: 'Cormorant Infant';
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 96px;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+.modal-content-inner>p {
+  color: #3E4147;
+  font-family: 'Arvo';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  margin-bottom: 48px;
+}
+
+.modal-content-inner>a {
+  color: #3E4147; border-bottom: 3px solid #CC4425;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.modal-content-inner>a:hover {
+  color: #CC4425;
+}
+
+/*modal button title*/
+.AMModBtnTitle > h1{
+      position: relative;
+    top: 46%;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Work sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 2rem; 
+    margin: 4px;
+  /* to break a word if to long*/
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+  /* Non standard for webkit */
+     word-break: break-word;
+
+    -webkit-hyphens: manual;
+       -moz-hyphens: manual;
+        -ms-hyphens: manual;
+            hyphens: manual;
+  }
+@media screen and (min-width: 1400px) {
+  .AMModBtnTitle > h1{
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 460px) {
+.AMModBtnTitle > h1{
+  top: 60%;
+  font-size: 1.5rem;
+  min-height: 30%;
+  }
+
+  .modal-content-inner
+{
+  padding-top: 5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.1s, opacity 2s linear;
+}
+.modal-content-inner-active
+{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+.modal-content-inner>h1
+{
+  font-family: 'Cormorant Infant';
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #CC4425;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 96px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.modal-content-inner>h2
+{
+  color: #CC4425;
+  font-family: 'Cormorant Infant';
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 96px;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+.modal-content-inner>h3, .modal-content-inner>h4
+{
+  color: #CC4425;
+  font-family: 'Cormorant Infant';
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 96px;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+.modal-content-inner>p {
+  color: #3E4147;
+  font-family: 'Arvo';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  margin-bottom: 48px;
+}
+}
+/* typography finish*/
